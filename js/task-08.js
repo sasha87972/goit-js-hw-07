@@ -11,6 +11,7 @@ function amountOfBoxes() {
     createBoxes(amount);
 }
 function createBoxes(amount) {
+    let boxesArray = [];
     for (let i = 0; i < amount; i += 1) {
         const boxEl = document.createElement('div');
         let boxSize = 30 + (i * 10) + 'px';
@@ -18,10 +19,10 @@ function createBoxes(amount) {
         boxEl.style.height = boxSize;
         boxEl.style.backgroundColor = `rgb(${randomRgb()}, ${randomRgb()}, ${randomRgb()})`;
         boxEl.textContent = i + 1;
-        boxesEl.appendChild(boxEl);
+        boxesArray.push(boxEl);
     }
+    boxesEl.append(...boxesArray);
 }
-
 
 function destroyBoxes() {
     boxesEl.innerHTML = '';
