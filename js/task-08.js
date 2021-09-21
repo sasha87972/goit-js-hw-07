@@ -24,6 +24,9 @@ function createBoxes(amount) {
     boxesEl.append(...boxesArray);
 }
 
+
+
+
 function destroyBoxes() {
     boxesEl.innerHTML = '';
 } 
